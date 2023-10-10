@@ -2,7 +2,7 @@ import axio from 'axios';
 
 const instance = axio.create({
   //baseURL: 'http://localhost:4444',
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: process.env.PORT,
 });
 
 //вшивать авторизацию
