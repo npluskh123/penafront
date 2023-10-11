@@ -33,7 +33,7 @@ export const AddPost = () => {
   const [surname, setSurname] = React.useState('');
   const [telephone, setTelephone] = React.useState('');
   const [adress, setAdress] = React.useState('');
-  const [payment, setPayment] = React.useState(false);
+  const [payment, setPayment] = React.useState('');
   const [length, setLength] = React.useState('');
   const [width, setWidth] = React.useState('');
   const [category, setCategory] = React.useState('');
@@ -203,10 +203,19 @@ export const AddPost = () => {
             label="Оплата"
             // defaultValue={false}
             onChange={(e) => setPayment(e.target.value)}>
-            <MenuItem value={false}>Не оплачено</MenuItem>
-            <MenuItem value={true}>Оплачено</MenuItem>
+            <MenuItem value={'Не оплачено'}>Не оплачено</MenuItem>
+            <MenuItem value={'Оплачено наличными'}>Оплачено наличными</MenuItem>
+            <MenuItem value={'Оплачено мобильным банком'}>Оплачено мобильным банком</MenuItem>
           </Select>
         </FormControl>
+      </div>
+
+      <div>
+        <a href={telephone}>
+          <Button sx={{ m: 1 }} variant="contained" endIcon={<SendIcon />}>
+            Позвонить
+          </Button>
+        </a>
       </div>
       <Box
         component="form"
@@ -249,14 +258,6 @@ export const AddPost = () => {
           />
         </div>
 
-        <div>
-          <Stack sx={{ m: 1, width: '100%' }} spacing={2}>
-            <Alert severity="success">
-              <AlertTitle>Звонок</AlertTitle>
-              <strong>+7{telephone}</strong>
-            </Alert>
-          </Stack>
-        </div>
         <div>
           <TextField
             id="outlined-basic"
