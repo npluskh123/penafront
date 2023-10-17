@@ -331,6 +331,13 @@ export const AddPost = () => {
               <MenuItem value={210}>210₽</MenuItem>
               <MenuItem value={220}>220₽</MenuItem>
               <MenuItem value={230}>230₽</MenuItem>
+              <MenuItem value={240}>240₽</MenuItem>
+              <MenuItem value={250}>250₽</MenuItem>
+              <MenuItem value={260}>260₽</MenuItem>
+              <MenuItem value={270}>270₽</MenuItem>
+              <MenuItem value={280}>280₽</MenuItem>
+              <MenuItem value={290}>290₽</MenuItem>
+              <MenuItem value={300}>300₽</MenuItem>
             </Select>
           </FormControl>
         </div>
@@ -344,13 +351,13 @@ export const AddPost = () => {
         </Stack>
       </div>
 
-      <Button
+      {/* <Button
         sx={{ m: 1 }}
         onClick={() => inputFileRef.current.click()}
         variant="outlined"
         size="large">
         Загрузить фото
-      </Button>
+      </Button> */}
       <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
       {imageUrl && (
         <>
