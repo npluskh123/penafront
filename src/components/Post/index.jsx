@@ -99,8 +99,11 @@ export const Post = ({
 
             <ul className={styles.postDetails}>
               <li>
-                {payment}
-                {!payment ? payment : <PriceCheckIcon />}
+                <PriceCheckIcon /> {payment}
+              </li>
+            </ul>
+            <ul className={styles.postDetails}>
+              <li>
                 <MoveUpIcon /> <span>{stat[status]}</span>
               </li>
             </ul>

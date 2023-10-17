@@ -44,6 +44,7 @@ export const AddPost = () => {
   const [tags, setTags] = React.useState('');
   const [imageUrl, setImageUrl] = React.useState('');
   const inputFileRef = React.useRef(null); //photo
+  const tel = 'tel:' + String(telephone);
   var options = {
     year: 'numeric',
     month: 'long',
@@ -211,12 +212,13 @@ export const AddPost = () => {
       </div>
 
       <div>
-        <a href={telephone}>
+        <a href={tel}>
           <Button sx={{ m: 1 }} variant="contained" endIcon={<SendIcon />}>
-            Позвонить
+            Позвонить {telephone}
           </Button>
         </a>
       </div>
+
       <Box
         component="form"
         sx={{
