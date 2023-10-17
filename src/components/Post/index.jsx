@@ -60,9 +60,9 @@ export const Post = ({
               <EditIcon />
             </IconButton> */}
             {/* </Link> */}
-            <IconButton onClick={onClickRemove} color="secondary">
+            {/* <IconButton onClick={onClickRemove} color="secondary">
               <DeleteIcon />
-            </IconButton>
+            </IconButton> */}
           </div>
         )}
         {imageUrl && (
@@ -80,7 +80,7 @@ export const Post = ({
               {isFullPost ? (
                 numberCarpet
               ) : (
-                <Link to={`/posts/${_id}`}>
+                <Link to={`/posts/${_id}/edit`}>
                   №{numberCarpet} {surname} {adress}
                 </Link>
               )}
